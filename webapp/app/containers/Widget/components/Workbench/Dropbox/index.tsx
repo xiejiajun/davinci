@@ -20,7 +20,8 @@ export type DragType = 'category' | 'value'
 export type DropboxType = DragType | 'all'
 export type DropboxItemType = DragType | 'add'
 export type DropType = 'outside' | 'inside' | 'unmoved'
-export type AggregatorType = 'sum' | 'avg' | 'count' | 'COUNTDISTINCT' | 'max' | 'min' | 'median' | 'var' | 'dev'
+export type AggregatorType = 'sum' | 'avg' | 'count' | 'COUNTDISTINCT' | 'max' | 'min' | 'median' | 'var' | 'dev' | 'SUM' |
+  'COUNT' | 'MAX' | 'MIN' | 'MEDIAN' | 'VAR' | 'DEV' | 'AVG'
 
 interface IDataColumn {
   name: string

@@ -44,6 +44,15 @@ export function getAggregatorLocale (agg) {
     case 'percentile': return '百分位'
     case 'stddev': return '标准偏差'
     case 'var': return '方差'
+    case 'SUM': return '总计UPPER'
+    case 'AVG': return '平均数UPPER'
+    case 'COUNT': return '计数UPPER'
+    case 'MAX': return '最大值UPPER'
+    case 'MIN': return '最小值UPPER'
+    case 'MEDIAN': return '中位数UPPER'
+    case 'PERCENTILE': return '百分位UPPER'
+    case 'STDDEV': return '标准偏差UPPER'
+    case 'VAR': return '方差UPPER'
   }
 }
 

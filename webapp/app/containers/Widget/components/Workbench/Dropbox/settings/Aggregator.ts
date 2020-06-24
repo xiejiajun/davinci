@@ -19,6 +19,13 @@ const AggregatorIndicator: ISettingItem = {
     COUNTDISTINCT: getAggregatorLocale('COUNTDISTINCT'),
     max: getAggregatorLocale('max'),
     min: getAggregatorLocale('min')
+
+    ,
+    SUM: getAggregatorLocale('SUM'),
+    AVG: getAggregatorLocale('AVG'),
+    COUNT: getAggregatorLocale('COUNT'),
+    MAX: getAggregatorLocale('MAX'),
+    MIN: getAggregatorLocale('MIN')
   }]
 }
 
@@ -33,6 +40,7 @@ const AggregatorDimension: ISettingItem = {
   sub: false,
   items: [{
     count: getAggregatorLocale('count'),
+    COUNT: getAggregatorLocale('COUNT'),
     COUNTDISTINCT: getAggregatorLocale('COUNTDISTINCT')
   }]
 }
