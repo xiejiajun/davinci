@@ -2,7 +2,6 @@ logs/
 project/target/
 project/project/
 target/
-build/
 *.iml
 *.ipr
 *.iws
