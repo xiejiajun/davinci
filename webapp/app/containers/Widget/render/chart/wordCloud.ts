@@ -80,6 +80,7 @@ export default function (chartProps: IChartProps) {
         .filter((d) => !!d[title])
         .map((d) => ({
           name: d[title],
+          // TODO 指标名称${m.agg}(${decodedMetricName})
           value: d[`${agg}(${metricName})`]
         }))
     }]

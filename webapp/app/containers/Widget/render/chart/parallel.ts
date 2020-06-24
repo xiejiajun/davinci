@@ -157,6 +157,7 @@ export default function (chartProps: IChartProps) {
       legendData.push(grpText)
       const data = rows.map((r) => {
         const dimData = axisDimensions.map((name) => r[name])
+        // TODO 指标名称${m.agg}(${decodedMetricName})
         const metricData = metrics.map((m) => r[`${m.agg}(${decodeMetricName(m.name)})`])
         return dimData.concat(metricData)
       })

@@ -126,6 +126,7 @@ export default function (chartProps: IChartProps, drillOptions?: any) {
       // animationDuration: 1000,
       // animationDurationUpdate: 1000,
       data: [{
+        // TODO 指标名称${m.agg}(${decodedMetricName})
         value: data.length ? data[0][`${m.agg}(${decodedMetricName})`] : 0,
         name: m.field.alias || decodedMetricName
       }],
@@ -133,6 +134,7 @@ export default function (chartProps: IChartProps, drillOptions?: any) {
         lineStyle: {
           width: axisLineSize,
           color: [
+            // TODO 指标名称${m.agg}(${decodedMetricName})
             [data.length ? data[0][`${m.agg}(${decodedMetricName})`] / max : 0, axisLineColor],
             [1, '#ddd']
           ]

@@ -172,6 +172,7 @@ export default function (chartProps: IChartProps, drillOptions?: any) {
           //   }
           // } else {
           return {
+            // TODO 指标名称${m.agg}(${decodedMetricName})
             value: g[`${m.agg}(${decodedMetricName})`],
             ...itemStyleObj
           }

@@ -147,6 +147,7 @@ export default function (chartProps: IChartProps, drillOptions) {
   let rightMax
 
   if (stack) {
+    // TODO 指标名称${m.agg}(${decodedMetricName})
     leftMax = metrics.reduce((num, m) => num + Math.max(...data.map((d) => d[`${m.agg}(${decodeMetricName(m.name)})`])), 0)
     rightMax = secondaryMetrics.reduce((num, m) => num + Math.max(...data.map((d) => d[`${m.agg}(${decodeMetricName(m.name)})`])), 0)
   } else {

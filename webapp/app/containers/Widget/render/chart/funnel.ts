@@ -82,6 +82,7 @@ export default function (chartProps: IChartProps, drillOptions?: any) {
 
     metrics.forEach((metric) => {
       const decodedMetricName = decodeMetricName(metric.name)
+      // TODO 指标名称${m.agg}(${decodedMetricName})
       const metricNameWithAgg = `${metric.agg}(${decodedMetricName})`
 
       const seriesData = []
@@ -178,6 +179,7 @@ export default function (chartProps: IChartProps, drillOptions?: any) {
       seriesData.push({
         name: decodedMetricName,
         metricName: metric.name,
+        // TODO 指标名称${m.agg}(${decodedMetricName})
         value: data.reduce((sum, record) => sum + record[`${metric.agg}(${decodedMetricName})`], 0)
       })
     })

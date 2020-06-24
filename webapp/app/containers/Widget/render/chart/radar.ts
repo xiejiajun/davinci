@@ -87,6 +87,7 @@ export default function (chartProps: IChartProps) {
 
     metrics.forEach((m) => {
       const name = decodeMetricName(m.name)
+      // TODO 指标名称${m.agg}(${decodedMetricName})
       const cellVal = row[`${m.agg}(${name})`]
       indicatorMax = Math.max(indicatorMax, cellVal)
       if (!dimensionData[name][row[dimension.name]]) {

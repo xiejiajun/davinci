@@ -253,6 +253,7 @@ export default function (chartProps: IChartProps, drillOptions) {
             selectedItems.some((item) => item === index)
           ) {
             return {
+              // TODO 指标名称${m.agg}(${decodedMetricName})
               value: percentage
                 ? (d[`${m.agg}(${decodedMetricName})`] /
                     getDataSum(data, metrics)[index]) *
@@ -491,6 +492,7 @@ export function getDataSum (data, metrics) {
     let maSum = 0
     metrics.forEach((m, i) => {
       const decodedMetricName = decodeMetricName(m.name)
+      // TODO 指标名称${m.agg}(${decodedMetricName})
       const metricName = d[`${m.agg}(${decodedMetricName})`]
       metricArr.push(metricName)
       if (metricArr.length === metrics.length) {

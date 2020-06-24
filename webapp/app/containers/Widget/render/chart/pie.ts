@@ -90,6 +90,7 @@ export default function (chartProps: IChartProps, drillOptions?: any) {
         value.forEach((v) => {
           const obj = {
             name: legendStr,
+            // TODO 指标名称${m.agg}(${decodedMetricName})
             value: v[`${metric.agg}(${decodedMetricName})`]
           }
           seriesData.push(obj)

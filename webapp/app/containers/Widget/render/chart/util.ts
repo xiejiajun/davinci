@@ -497,6 +497,7 @@ export function getGroupedXaxis (data, xAxisColumn, metrics) {
       }
       if (appliedMetric) {
         const { agg, name } = appliedMetric
+        // TODO 指标名称${m.agg}(${decodedMetricName})
         grouped[colKey] += d[`${agg}(${decodeMetricName(name)})`]
       }
       return grouped

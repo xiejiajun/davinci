@@ -73,6 +73,7 @@ export default function (chartProps: IChartProps) {
   const series = []
 
   metrics.forEach((m) => {
+    // TODO 指标名称${m.agg}(${decodedMetricName})
     const metricName = `${m.agg}(${decodeMetricName(m.name)})`
     sourceData = data.map((d) => d[metricName])
     const baseData = []

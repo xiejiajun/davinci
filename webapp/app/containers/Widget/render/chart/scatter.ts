@@ -73,6 +73,7 @@ export default function (chartProps: IChartProps, drillOptions?: any) {
   let sizeItemName = ''
   if (size.items.length) {
     const sizeItem = size.items[0]
+    // TODO 指标名称${m.agg}(${decodedMetricName})
     sizeItemName = `${sizeItem.agg}(${decodeMetricName(sizeItem.name)})`
     const sizeValues = data.map((d) => d[sizeItemName])
     sizeRate = getSizeRate(Math.min(...sizeValues), Math.max(...sizeValues))

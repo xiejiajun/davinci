@@ -315,6 +315,7 @@ export default function (chartProps: IChartProps) {
   data.forEach((d, index) => {
     let linesSeriesData = []
     let scatterData = []
+    // TODO 指标名称${m.agg}(${decodedMetricName})
     const value = d[`${agg}(${metricName})`]
 
     if (getGeoCity.length > 1 && d[getGeoCity[0].name] && d[getGeoCity[1].name]) {

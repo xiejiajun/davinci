@@ -82,6 +82,7 @@ export default function (chartProps: IChartProps) {
       if (dimensions[idx - 1]) {
         const source = row[dimensions[idx - 1].name]
         const target = row[dimensions[idx].name]
+        // TODO 指标名称${m.agg}(${decodedMetricName})
         const value = +row[`${agg}(${metricsName})`]
         if (isNaN(value)) { return }
         const existedLink = links.length && links.find((lnk) => lnk.source === source && lnk.target === target)
