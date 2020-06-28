@@ -32,3 +32,5 @@ userfiles/
 *yarn.lock
 bin/upgrade.go
 bin/upgrade
+webapp/build/
+webapp/node_modules/
