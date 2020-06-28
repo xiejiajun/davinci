@@ -2,10 +2,13 @@
 
 base_dir=$(cd `dirname $0`;pwd)/../
 
-cd "${base_dir}" && mvn clean package -DskipTests
+# 编译后端项目
+cd ${base_dir} && mvn clean package -DskipTests
 if [[ $? != 0 ]];then
 	echo "davinci back end compile failed ......"
 	exit 1
 fi
-cd "${base_dir}"/webapp && cnpm install
-cd "${base_dir}"/webapp && cnpm run build
+# 安装npm包：npm install --registry=https://registry.npm.taobao.org
+cd ${base_dir} /webapp && cnpm install
+# 编译前端项目: nmp run build
+cd ${base_dir}/webapp && cnpm run build
